@@ -6,4 +6,44 @@
 body{
     margin: 0;
     font-family: 'MyRoboto';
+    background-color: rgb(5,23,30);
 }
+
+header{
+    background-color: rgb(8,33,41);
+    padding-left: 50px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.headline{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.headline-img{
+    height: 52px;
+    width: 52px;
+    padding: 4px;
+    background-color: rgb(253,91,79);
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+#headline_color{
+    color:  rgb(253,91,79);
+}
+.headline span{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.underline{
+    font-size: 18px !important;
+    font-weight: normal !important;
+    padding-top: 8px;
+}
+
+
