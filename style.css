@@ -2,6 +2,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+html{
+    scrollbar-color: rgb(54, 157, 195);
+}
 
 body{
     margin: 0;
@@ -44,6 +47,33 @@ header{
     font-size: 18px !important;
     font-weight: normal !important;
     padding-top: 8px;
+}
+
+#books_container{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame{
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 350px;
+    background-color: rgb(13,50,64);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+h3{
+    text-align: center;
+}
+
+hr{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border: 2px solid rgb(54, 157, 195);
 }
 
 

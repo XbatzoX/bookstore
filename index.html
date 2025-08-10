@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
 </head>
-<body>
+<body onload="renderBooks()">
     <header>
         <section class="headline">
             <div class="headline-img">
@@ -23,7 +24,9 @@
             <span class="underline">get your book here</span>
         </section>
     </header>
-    <main></main>
+    <main>
+        <section id="books_container"></section>
+    </main>
     <footer></footer>
 </body>
 </html>
