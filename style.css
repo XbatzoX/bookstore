@@ -92,4 +92,34 @@ hr{
     width: 60px;
 }
 
+.price-box{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 600;
+    color:  rgb(253,91,79);
+}
+
+.liked-container{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.liked-container:hover{
+    cursor: pointer;
+}
+
+.liked{
+    margin-bottom: 6px;
+}
+
 

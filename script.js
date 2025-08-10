@@ -26,8 +26,52 @@ function renderPriceLikes(index){
     const contentPriceLikesRef = document.getElementById('frame' + index);
     let aktualPriceLikes = {
         "price": books[index].price,
-        "likes": books[index].likes
+        "likes": books[index].likes,
+        "liked": books[index].liked
+    };
+    aktualPriceLikes.price = aktualPriceLikes.price.toFixed(2);
+    contentPriceLikesRef.innerHTML += getPriceLikesTemplate(aktualPriceLikes, index);
+    renderLikedStatus((aktualPriceLikes.liked), index);
+}
+
+function renderLikedStatus(boolLiked, index){
+    const contentLikedRef = document.getElementById('img_box' + index);
+    let isLiked = boolLiked;
+
+    if(isLiked){
+        contentLikedRef.innerHTML = getIsLikedTemplate();
+    }
+    else{
+        contentLikedRef.innerHTML = getIsNotLikedTemplate();
+    }
+}
+
+function changeCheckboxImg(index){
+    const contentLikedRef = document.getElementById('img_box' + index);
+    let isLiked = books[index].liked;
+
+    if(isLiked){
+        contentLikedRef.innerHTML = getIsNotLikedTemplate();
+    }
+    else{
+        contentLikedRef.innerHTML = getIsLikedTemplate();
     }
 
-    contentPriceLikesRef.innerHTML += getPriceLikesTemplate(aktualPriceLikes, index);
+    customizeLikeValues(isLiked, index);
+}
+
+function customizeLikeValues(isLiked, index){
+    const contentLikesRef = document.getElementById('like_value');
+    let countLikes = books[index].likes;
+
+    if(isLiked){
+        books[index].liked = false;
+        books[index].likes = (countLikes - 1);
+    }
+    else{
+        books[index].liked = true;
+        books[index].likes = (countLikes + 1);
+    }
+
+    contentLikesRef.innerHTML = getLikesValueTemplate(books[index].likes);
 }
