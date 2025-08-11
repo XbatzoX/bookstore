@@ -5,6 +5,7 @@ function renderBooks(){
         renderFrameOfBook(i);
         renderTitleofBook(i);
         renderPriceLikes(i);
+        renderBookInfos(i);
     }
 }
 
@@ -61,7 +62,7 @@ function changeCheckboxImg(index){
 }
 
 function customizeLikeValues(isLiked, index){
-    const contentLikesRef = document.getElementById('like_value');
+    const contentLikesRef = document.getElementById('like_value' + index);
     let countLikes = books[index].likes;
 
     if(isLiked){
@@ -74,4 +75,15 @@ function customizeLikeValues(isLiked, index){
     }
 
     contentLikesRef.innerHTML = getLikesValueTemplate(books[index].likes);
+}
+
+function renderBookInfos(index){
+    const contentInfosRef = document.getElementById('frame' + index);
+    let bookInfos = {
+        "author":books[index].author,
+        "published":books[index].publishedYear,
+        "genre":books[index].genre
+    };
+
+    contentInfosRef.innerHTML += getBookInfosTemplate(bookInfos);
 }

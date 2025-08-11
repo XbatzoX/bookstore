@@ -122,4 +122,13 @@ hr{
     margin-bottom: 6px;
 }
 
+.info-container{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    font-size: 14px;
+}
 
+td{
+    padding-right: 8px;
+}

@@ -19,10 +19,9 @@ function getPriceLikesTemplate(myObject, index){
                 <span class="price">${myObject[objkeys[0]]} €</span>
                 <div class="liked-container" onclick="changeCheckboxImg(${index})">
                     <div id="img_box${index}"></div>
-                    <span id="like_value" class="liked">${myObject[objkeys[1]]}</span>
+                    <span id="like_value${index}" class="liked">${myObject[objkeys[1]]}</span>
                 </div>
-            </div>
-            <hr>`;
+            </div>`;
 }
 
 function getIsLikedTemplate(){
@@ -35,4 +34,28 @@ function getIsNotLikedTemplate(){
 
 function getLikesValueTemplate(likes){
     return `<span id="like_value" class="liked">${likes}</span>`;
+}
+
+function getBookInfosTemplate(myObject){
+    let objkeys = Object.keys(myObject);
+    return `<div class="info-container">
+                <table>
+                    <tr>
+                        <td>Author</td>
+                        <td>:</td>
+                        <td>${myObject[objkeys[0]]}</td>
+                    </tr>
+                    <tr>
+                        <td>Erscheinungsjahr</td>
+                        <td>:</td>
+                        <td>${myObject[objkeys[1]]}</td>
+                    </tr>
+                    <tr>
+                        <td>Genre</td>
+                        <td>:</td>
+                        <td>${myObject[objkeys[2]]}</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>`;
 }
