@@ -6,6 +6,7 @@ function renderBooks(){
         renderTitleofBook(i);
         renderPriceLikes(i);
         renderBookInfos(i);
+        renderComments(i);
     }
 }
 
@@ -86,4 +87,23 @@ function renderBookInfos(index){
     };
 
     contentInfosRef.innerHTML += getBookInfosTemplate(bookInfos);
+}
+
+function renderComments(index){
+    const contentCommentsRef = document.getElementById('frame' + index);
+    let comments = {
+        "name":"",
+        "comment":""
+    };
+    let amountOfComments = books[index].comments.length;
+
+    contentCommentsRef.innerHTML += getCommentsTableTemplate(index);
+    let contentTableRef = document.getElementById('comments' + index);
+
+    for (let i = 0; i < amountOfComments; i++) {
+        comments = books[index].comments[i];
+        
+        contentTableRef.innerHTML += getContentCommentsTemplate(comments);
+    }
+
 }

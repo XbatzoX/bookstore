@@ -59,3 +59,23 @@ function getBookInfosTemplate(myObject){
             </div>
             <hr>`;
 }
+
+function getCommentsTableTemplate(index){
+    return `<div class="comments-container">
+                <table id="comments${index}">
+                    <tr>
+                        <th>Kommentare:</th>
+                    </tr>
+                </table>
+            </div>`;
+}
+
+function getContentCommentsTemplate(myObject){
+    let objkeys = Object.keys(myObject);
+    
+    return `<tr>
+                <td>${myObject[objkeys[0]]}</td>
+                <td>:</td>
+                <td>${myObject[objkeys[1]]}</td>
+            </tr>`;
+}
