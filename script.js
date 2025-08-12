@@ -6,7 +6,7 @@ function renderBooks(){
         renderTitleofBook(i);
         renderPriceLikes(i);
         renderBookInfos(i);
-        renderComments(i, false);
+        renderComments(i);
         renderInputField(i);
     }
 }
