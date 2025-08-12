@@ -5,7 +5,7 @@ function getFrameTemplate(index){
 
 function getTitleTemplate(strTitle){
     return `<h3>${strTitle}</h3>
-            <hr>
+            <hr class="hr-top">
             <div class="book-box">
                 <img src="./assets/img/book.png" alt="book graphic as design">
             </div>
@@ -61,12 +61,12 @@ function getBookInfosTemplate(myObject){
 }
 
 function getCommentsTableTemplate(index){
-    return `<div class="comments-container">
-                <table id="comments${index}">
-                    <tr>
-                        <th>Kommentare:</th>
-                    </tr>
-                </table>
+    return `<div class="comments-frame">
+                <h4>Kommentare :</h4>
+                <div class="comments-container">
+                    <table id="comments${index}" class="table-comments">
+                    </table>
+                </div>
             </div>`;
 }
 
@@ -78,4 +78,11 @@ function getContentCommentsTemplate(myObject){
                 <td>:</td>
                 <td>${myObject[objkeys[1]]}</td>
             </tr>`;
+}
+
+function getInputFieldTemplate(index){
+    return `<div class="input-container">
+                <input id="input${index}" class="input-design" type="text" placeholder="Schreibe dein Kommentar..">
+                <img src="./assets/icons/send_paper_plane.svg" alt="send comment tag looks like paper plane">
+            </div>`
 }

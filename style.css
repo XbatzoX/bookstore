@@ -6,6 +6,28 @@ html{
     scrollbar-color: rgb(54, 157, 195);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(54, 157, 195); 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(41, 120, 149); 
+}
+
 body{
     margin: 0;
     font-family: 'MyRoboto';
@@ -74,6 +96,9 @@ hr{
     margin-block-start: 0;
     margin-block-end: 0;
     border: 2px solid rgb(54, 157, 195);
+}
+
+.hr-top{
     box-shadow: 0px 30px 30px rgb(54, 157, 195);
 }
 
@@ -132,3 +157,48 @@ hr{
 td{
     padding-right: 8px;
 }
+
+.comments-frame{
+    padding-top: 0px;
+    padding-left: 16px;
+}
+
+.comments-container{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 16px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.comments-container td{
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+h4{
+    margin-block-start: 16px;
+    margin-block-end: 12px;
+}
+
+.input-container{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.input-design{
+    height: 24px;
+    background-color: rgb(22, 80, 102);
+    border: none;
+    border-bottom: 2px solid rgb(54, 157, 195);
+    color: white;
+    font-size: 12px;
+    flex: 1;
+}
+
+.input-design::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+

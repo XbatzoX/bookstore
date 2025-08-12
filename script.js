@@ -7,6 +7,7 @@ function renderBooks(){
         renderPriceLikes(i);
         renderBookInfos(i);
         renderComments(i);
+        renderInputField(i);
     }
 }
 
@@ -106,4 +107,10 @@ function renderComments(index){
         contentTableRef.innerHTML += getContentCommentsTemplate(comments);
     }
 
+}
+
+function renderInputField(index){
+    const contentInputRef = document.getElementById('frame' + index);
+
+    contentInputRef.innerHTML += getInputFieldTemplate(index);
 }
