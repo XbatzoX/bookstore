@@ -188,6 +188,12 @@ h4{
     gap: 8px;
 }
 
+.input-container img:hover{
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: rgb(22, 80, 102);
+}
+
 .input-design{
     height: 24px;
     background-color: rgb(22, 80, 102);
@@ -201,4 +207,3 @@ h4{
 .input-design::placeholder{
     color: rgba(255, 255, 255, 0.3);
 }
-

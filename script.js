@@ -6,7 +6,7 @@ function renderBooks(){
         renderTitleofBook(i);
         renderPriceLikes(i);
         renderBookInfos(i);
-        renderComments(i);
+        renderComments(i, false);
         renderInputField(i);
     }
 }
@@ -113,4 +113,21 @@ function renderInputField(index){
     const contentInputRef = document.getElementById('frame' + index);
 
     contentInputRef.innerHTML += getInputFieldTemplate(index);
+}
+
+function renderNewComment(index){
+    let newCommentRef = document.getElementById('input' + index);
+    let newComment = String(newCommentRef.value);
+    let myComment = {
+        "name" : "Batzo",
+        "comment" : newComment
+    };
+
+    if(newComment == ""){
+        alert('Kommentarfeld darf nicht leer sein.');
+    }
+    else{
+        books[index].comments.unshift(myComment);
+        location.reload();
+    }
 }

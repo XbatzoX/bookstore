@@ -83,6 +83,7 @@ function getContentCommentsTemplate(myObject){
 function getInputFieldTemplate(index){
     return `<div class="input-container">
                 <input id="input${index}" class="input-design" type="text" placeholder="Schreibe dein Kommentar..">
-                <img src="./assets/icons/send_paper_plane.svg" alt="send comment tag looks like paper plane">
+                <img src="./assets/icons/send_paper_plane.svg" 
+                    alt="send comment tag looks like paper plane" onclick="renderNewComment(${index})">
             </div>`
 }
