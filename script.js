@@ -1,6 +1,8 @@
 let countOfBooks = books.length;
 
 function renderBooks(){
+    getDataFromLocalStorage(countOfBooks);
+
     for (let i = 0; i < countOfBooks; i++) {
         renderFrameOfBook(i);
         renderTitleofBook(i);
@@ -9,6 +11,7 @@ function renderBooks(){
         renderComments(i);
         renderInputField(i);
     }
+    // saveInputToLocalStorage(countOfBooks);
 }
 
 function renderFrameOfBook(index){
@@ -128,6 +131,7 @@ function renderNewComment(index){
     }
     else{
         books[index].comments.unshift(myComment);
+        saveInputToLocalStorage(countOfBooks);
         location.reload();
     }
 }
